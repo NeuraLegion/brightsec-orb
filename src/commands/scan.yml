@@ -19,12 +19,60 @@ parameters:
     type: env_var_name
     description: "What is the name of the environment variable containing the token?"
     default: BRIGHTSEC_TOKEN
+  tests:
+    type: enum
+    default: ["xss", "osi", "lfi"]
+    description: "What tests to run?"
+    enum:
+    - "angular_csti"
+    - "backup_locations"
+    - "broken_saml_auth"
+    - "brute_force_login"
+    - "business_constraint_bypass"
+    - "common_files"
+    - "cookie_security"
+    - "csrf"
+    - "date_manipulation"
+    - "default_login_location"
+    - "directory_listing"
+    - "dom_xss"
+    - "email_injection"
+    - "exposed_couch_db_apis"
+    - "file_upload"
+    - "full_path_disclosure"
+    - "header_security"
+    - "hrs"
+    - "html_injection"
+    - "http_method_fuzzing"
+    - "http_response_splitting"
+    - "id_enumeration"
+    - "improper_asset_management"
+    - "insecure_tls_configuration"
+    - "jwt"
+    - "ldapi"
+    - "lfi"
+    - "mass_assignment"
+    - "nosql"
+    - "open_buckets"
+    - "open_database"
+    - "osi"
+    - "proto_pollution"
+    - "retire_js"
+    - "rfi"
+    - "secret_tokens"
+    - "server_side_js_injection"
+    - "sqli"
+    - "ssrf"
+    - "ssti"
+    - "unvalidated_redirect"
+    - "version_control_systems"
+    - "wordpress"
+    - "xpathi"
+    - "xss"
+    - "xxe"
 
 steps:
   - run:
       name: Start a scan 🏁
       command: |
-          bright-cli scan:run --token "${<<parameters.token>>}" \\
-                              --crawler "<<parameters.target>>" \\
-                              --project "<<parameters.project>>" \\
-                              --name "<<parameters.scan_name>>"
+          bright-cli scan:run --token "${<<parameters.token>>}" --crawler "<<parameters.target>>" --project "<<parameters.project>>" --name "<<parameters.scan_name>>" --test "<<parameters.tests>>"
