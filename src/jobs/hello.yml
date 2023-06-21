@@ -5,5 +5,5 @@ description: >
 docker:
   - image: cimg/base:current
 steps:
-  - install:
-  - scan:
+  - install
+  - scan
