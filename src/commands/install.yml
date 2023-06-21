@@ -1,0 +1,8 @@
+description: >
+  This command is used to install bright-cli to be used by other commands.
+# What will this command do?
+# Descriptions should be short, simple, and clear.
+steps:
+  - run:
+      name: Install dependencies
+      command: wget https://github.com/NeuraLegion/bright-cli/releases/download/v9.2.0/nexploit-cli-linux-x64 -O /usr/local/bin/bright-cli && chmod +x /usr/local/bin/bright-cli
