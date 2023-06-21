@@ -32,6 +32,7 @@ jobs:
       - scanner/scan:
           target: "https://brokencrystals.com"
           scan_name: "CircleCI Scan"
+          project: 5dxytCV2g4Xo9ngMjtsddK
 
 workflows:
   test-deploy:

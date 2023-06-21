@@ -7,10 +7,6 @@ parameters:
     type: string
     default: "https://brokencrystals.com"
     description: "What is the target to scan?"
-  token:
-    type: string
-    default: ""
-    description: "Which API token to use for the scan?"
   scan_name:
     type: string
     default: "CircleCI Scan"
@@ -23,7 +19,6 @@ parameters:
 steps:
   - run:
       environment:
-        BRIGHTSEC_TOKEN: <<parameters.token>>
         BRIGHTSEC_PROJECT: <<parameters.project>>
         BRIGHTSEC_NAME: <<parameters.scan_name>>
         BRIGHTSEC_TARGET: <<parameters.target>>
