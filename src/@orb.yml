@@ -1,14 +1,16 @@
 version: 2.1
 
 description: >
-  Sample orb description
+  Bright Security provides robust Dynamic Application Security Testing (DAST) solutions that empower you to enhance the security of your applications and APIs by detecting and mitigating technical as well as business logic vulnerabilities.
+  Seamlessly integrated into DevOps methodologies, Bright DAST guarantees efficient vulnerability scanning while reducing the occurrence of false positives.
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 
 # This information will be displayed in the orb registry and is not mandatory.
 display:
-  home_url: "https://www.example.com/docs"
-  source_url: "https://github.com/BrightSec/brightsec-orb"
+  home_url: "https://brightsec.com/"
+  source_url: "https://github.com/NeuraLegion/brightsec-orb"
+  signup_url: "https://app.brightsec.com/signup"
 
 # If your orb requires other orbs, you can import them like this. Otherwise remove the "orbs" stanza.
 # orbs:

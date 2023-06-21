@@ -1,12 +1,13 @@
 description: >
-  This is a sample executor using Docker and Node. If you want to provide a custom environment in your orb, insert your image here.
-  If you do not require an executor, you can simply delete this directory.
+  NexPloit CLI is a Command Line Interface (CLI) tool for Bright's solutions.
+  You can use NexPloit CLI for full control over scans such as: initialize, stop, poll, maintain and more.
+  In addition, NexPloit CLI can serve as a Repeater to scan local targets, without exposing them to the internet.
 docker:
-  - image: 'cimg/node:<<parameters.tag>>'
+  - image: 'neuralegion/repeater'
 parameters:
   tag:
-    default: lts
+    default: latest
     description: >
-      Pick a specific cimg/node image variant:
-      https://hub.docker.com/r/cimg/node/tags
+      Name of the tag to use for the image.
+      https://hub.docker.com/r/neuralegion/repeater
     type: string
