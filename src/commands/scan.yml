@@ -2,8 +2,29 @@ description: >
   This command is used to run a new scan.
 # What will this command do?
 # Descriptions should be short, simple, and clear.
+parameters:
+  target:
+    type: string
+    default: "https://brokencrystals.com"
+    description: "What is the target to scan?"
+  token:
+    type: string
+    description: "Which API token to use for the scan?"
+  name:
+    type: string
+    default: "CircleCI Scan"
+    description: "What is the name of the scan?"
+  project:
+    type: string
+    default: ""
+    description: "What is the project ID to use for the scan?"
 
 steps:
   - run:
-      name: Hello Greeting
-      command: bright-cli --version
+      enviroment:
+        BRIGHTSEC_TOKEN: << parameters.token >>
+        BRIGHTSEC_PROJECT: << parameters.project >>
+        BRIGHTSEC_NAME: << parameters.name >>
+        BRIGHTSEC_TARGET: << parameters.target >>
+      name: Start a scan 🏁
+      command: <<include(scripts/scan.sh)>>
