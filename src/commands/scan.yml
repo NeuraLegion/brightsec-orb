@@ -10,7 +10,7 @@ parameters:
   token:
     type: string
     description: "Which API token to use for the scan?"
-  name:
+  scan_name:
     type: string
     default: "CircleCI Scan"
     description: "What is the name of the scan?"
@@ -24,7 +24,7 @@ steps:
       enviroment:
         BRIGHTSEC_TOKEN: << parameters.token >>
         BRIGHTSEC_PROJECT: << parameters.project >>
-        BRIGHTSEC_NAME: << parameters.name >>
+        BRIGHTSEC_NAME: << parameters.scan_name >>
         BRIGHTSEC_TARGET: << parameters.target >>
       name: Start a scan 🏁
       command: <<include(scripts/scan.sh)>>
