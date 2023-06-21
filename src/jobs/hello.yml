@@ -7,6 +7,6 @@ docker:
 steps:
   - install
   - scan:
-    - token: $BRIGHTSEC_TOKEN
-    - project: $BRIGHTSEC_PROJECT
+    token: $BRIGHTSEC_TOKEN
+    project: $BRIGHTSEC_PROJECT
 
