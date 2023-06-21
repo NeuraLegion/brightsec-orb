@@ -5,7 +5,5 @@ description: >
 
 steps:
   - run:
-      environment:
-        PARAM_TO: <<parameters.to>>
       name: Hello Greeting
       command: bright-cli --version

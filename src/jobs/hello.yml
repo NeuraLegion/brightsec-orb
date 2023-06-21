@@ -6,8 +6,4 @@ docker:
   - image: cimg/base:current
 steps:
   - install:
-      name: Install dependencies
-      install: ''
   - scan:
-      name: Run scan
-      scan: ''
