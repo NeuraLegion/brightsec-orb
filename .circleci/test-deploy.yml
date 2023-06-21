@@ -28,6 +28,7 @@ jobs:
     steps:
       - checkout
       # Run your orb's commands to validate them.
+      - scanner/install
       - scanner/scan
 workflows:
   test-deploy:
