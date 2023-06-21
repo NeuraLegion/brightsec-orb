@@ -9,6 +9,7 @@ parameters:
     description: "What is the target to scan?"
   token:
     type: string
+    default: ""
     description: "Which API token to use for the scan?"
   scan_name:
     type: string
