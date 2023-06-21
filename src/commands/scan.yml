@@ -21,7 +21,7 @@ parameters:
     default: BRIGHTSEC_TOKEN
   tests:
     type: enum
-    default: ["xss", "osi", "lfi"]
+    default: "xss"
     description: "What tests to run?"
     enum:
     - "angular_csti"
