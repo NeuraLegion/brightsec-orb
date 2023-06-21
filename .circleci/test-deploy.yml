@@ -30,8 +30,8 @@ jobs:
       # Run your orb's commands to validate them.
       - scanner/install
       - scanner/scan:
-          token: $BRIGHTSEC_TOKEN
-          project: $BRIGHTSEC_PROJECT
+          token: ${BRIGHTSEC_TOKEN}
+          project: ${BRIGHTSEC_PROJECT}
           target: "https://brokencrystals.com"
           scan_name: "CircleCI Scan"
 
