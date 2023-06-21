@@ -2,11 +2,7 @@ description: >
   This command is used to run a new scan.
 # What will this command do?
 # Descriptions should be short, simple, and clear.
-parameters:
-  to:
-    type: string
-    default: "World"
-    description: "Hello to whom?"
+
 steps:
   - run:
       environment:
