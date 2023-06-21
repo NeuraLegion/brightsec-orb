@@ -25,6 +25,6 @@ steps:
       name: Start a scan 🏁
       command: |
           bright-cli scan:run --token "${<<parameters.token>>}" \\
-                              --crawler "${<<parameters.target>>}" \\
-                              --project "${<<parameters.project>>}" \\
-                              --name "${<<parameters.scan_name>>}"
+                              --crawler "<<parameters.target>>" \\
+                              --project "<<parameters.project>>" \\
+                              --name "<<parameters.scan_name>>"
