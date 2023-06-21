@@ -2,13 +2,6 @@ description: >
   Sample description
 # What will this job do?
 
-executor: default
-
-parameters:
-  to:
-    type: string
-    default: "World"
-    description: "Hello to whom?"
 steps:
-  - scan:
-      to: << parameters.to >>
+  - install
+  - scan
