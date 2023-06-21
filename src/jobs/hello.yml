@@ -6,4 +6,6 @@ docker:
   - image: cimg/base:current
 steps:
   - install
-  - scan
+  - scan:
+      token: $BRIGHTSEC_TOKEN
+      project: $BRIGHTSEC_PROJECT
