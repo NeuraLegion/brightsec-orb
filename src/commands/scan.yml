@@ -15,12 +15,16 @@ parameters:
     type: string
     default: ""
     description: "What is the project ID to use for the scan?"
+  token:
+    type: env_var_name
+    description: "What is the name of the environment variable containing the token?"
+    default: BRIGHTSEC_TOKEN
 
 steps:
   - run:
-      environment:
-        BRIGHTSEC_PROJECT: <<parameters.project>>
-        BRIGHTSEC_NAME: <<parameters.scan_name>>
-        BRIGHTSEC_TARGET: <<parameters.target>>
       name: Start a scan 🏁
-      command: <<include(scripts/scan.sh)>>
+      command: |
+          bright-cli scan:run --token "${<<parameters.token>>}" \\
+                              --crawler "${<<parameters.target>>}" \\
+                              --project "${<<parameters.project>>}" \\
+                              --name "${<<parameters.scan_name>>}"
