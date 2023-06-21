@@ -32,6 +32,8 @@ jobs:
       - scanner/scan:
           token: $BRIGHTSEC_TOKEN
           project: $BRIGHTSEC_PROJECT
+          target: "https://brokencrystals.com"
+          scan_name: "CircleCI Scan"
 
 workflows:
   test-deploy:
